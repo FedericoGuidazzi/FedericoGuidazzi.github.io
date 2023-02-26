@@ -1,0 +1,230 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+ul{
+    padding: 0!important;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    margin: 0!important;
+}
+
+#about>div>div>ul, #projects>div>ul{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.hidden *{
+    visibility: hidden;
+    height: 0;
+}
+
+#home, #projects{
+    background-image: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?w=2000")
+}
+
+.navbar-brand{
+    color: var(--bs-nav-link-color)!important;
+}
+
+.navbar-brand:hover{
+    color: black!important;
+}
+
+.nav-item{
+    text-align: right;
+    border-top: 1px solid darkgray;
+}
+
+.navbar-nav .nav-item:last-child>a{
+    padding-bottom: 0;
+}
+
+.nav-item a{
+    padding-right: 12px;
+}
+
+.dropdownIcon{
+    width: 25px;
+}
+
+ul>li>a>img{
+    width: 35px;
+}
+
+#navbar{
+    background-color: white!important;
+}
+
+#body{
+    padding-top: 56px;
+}
+
+#home{
+    height: 100vh;
+}
+
+#home > div{
+    display: grid;
+    align-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#home > div > h1{
+    padding: 0 10px 50px 10px;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+#home > div > p{
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+.logoImage{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#about, #contacts, body{
+    background-color: rgba(var(--bs-tertiary-bg-rgb))!important;
+}
+
+.scroll{
+    width: 100px;
+    color: black;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+}
+
+.arrow span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-bottom: 5px solid #3D3940;
+    border-right: 5px solid #3D3940;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll1 2.5s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+.dropdown-menu > li{
+    color: var(--bs-nav-link-color)!important;
+}
+
+.dropdown-item:active{
+    background-color: transparent!important;
+}
+
+.nascosto{
+    opacity: 0!important;
+    transition: all 1s!important;
+}
+
+.show{
+    opacity: 1!important;
+}
+
+#about h2, #projects h2, #contacts h2{
+    font-weight: bold;
+}
+
+#about li{
+    display: inline-block;
+    padding: 3px;
+}
+
+#skillsList > ul > li{
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+    font-weight: bold;
+}
+
+#about{
+    padding-bottom: 2rem;
+}
+
+#Skills{
+    margin-bottom: 16px;
+}
+
+#about>div>div>p{
+    font-size: 1.2em;
+}
+
+@keyframes scroll1 {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@media (min-width: 991.98px) { 
+    .nav-item{
+        border: none;
+    }
+
+    .nav-item a, .dropdown-toggle{
+       font-size: larger!important;
+    }
+    #about>div{
+        display: flex;
+    }
+
+    #Skills{
+        padding-top: 3rem!important;
+    }
+
+    #about > div > div:nth-child(2){
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 991.98px) { 
+    .dropdown-menu{
+        border: none!important;
+        text-align: right!important;
+    }
+
+    
+
+
+}
+
