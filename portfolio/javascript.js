@@ -45,10 +45,10 @@ var dict = {
         'Skills':'Competenze',
         'Projects':'Progetti',
         'Contacts':'Contatti',
-        'BookaMeli' : "BookaMeli è stato un progetto universitario che ho fatto insieme a un altro studente, l'obbiettivo del progetto era quello di creare un sito e-commerce per una libreria, dove i clienti possono comprare libri e il proprietario può gestire tutti gli aspetti del sito, a partire dall'aggiunta, rimozione e modifica dei libri fino all'aggiunta di nuove categorie di oggetti o la gestione di quelle già esistenti",
+        'BookaMeli' : "BookaMeli è stato un progetto universitario che ho fatto insieme a un altro studente, l'obbiettivo del progetto era quello di creare un sito e-commerce per una libreria, dove i clienti possono comprare libri e il proprietario può gestire tutti gli aspetti del sito, a partire dall'aggiunta, rimozione e modifica dei libri fino all'aggiunta di nuove categorie di oggetti o la gestione di quelle già esistenti.",
         'MenuManager': "Una semplice applicazione android che permette di gestire tutti gli aspetti di un menu settimanale, si ha la possibilità di creare ricette, aggiungere ingredienti alla lista della spesa e anche consultare ricette degli altri utenti.",
-        "Esp32_OpenDoorProject":"Una collezioni di soluzione che permettono di aprire portone e cancello da remoto autilizzando un Esp32 e un relè",
-        "MushroomsEdible":"In questo progetto ho utilizzato alcune caratteristiche dei funghi per classificarli in commestibili o no, utilizzando un dataset contenente più di 8000 funghi. L'accuratezza finale è del 100%",
+        "Esp32_OpenDoorProject":"Una collezioni di soluzione che permettono di aprire portone e cancello da remoto autilizzando un Esp32 e un relè.",
+        "MushroomsEdible":"In questo progetto ho utilizzato alcune caratteristiche dei funghi per classificarli in commestibili o no, utilizzando un dataset contenente più di 8000 funghi. L'accuratezza finale è del 100%.",
         "ContactsDescription" : "Sentiti libero di contattarmi quando vuoi, i seguenti sono i links ai miei social networks."
     },
     
@@ -127,5 +127,4 @@ $(document).ready(function(){
         event.preventDefault();
         window.open('mailto:guidazzi.federico@gmail.com');
     });
-
 });
