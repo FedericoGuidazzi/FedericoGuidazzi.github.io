@@ -20,6 +20,7 @@ $(document).ready(function() {
         }
         const currentMonthYear = document.getElementById("currentMonthYear");
         currentMonthYear.textContent = `${new Intl.DateTimeFormat("it-IT", { month: "long" }).format(firstDay)} ${year}`;
+        currentMonthYear.textContent = currentMonthYear.textContent.charAt(0).toUpperCase() + currentMonthYear.textContent.slice(1);
         let day = 1;
         for (let i = 0; i < 6; i++) {
             const row = document.createElement("tr");
@@ -173,7 +174,7 @@ $(document).ready(function() {
             let cardInnerText = "";
             lessonsData[clickedCell.textContent]
             .forEach(element=>{
-                cardInnerText += "<h3>"+element["name"]+"</h3>\
+                cardInnerText += "<div class='container row card mb-3'><h3 class='mt-2'>"+element["name"]+"</h3>\
                 <div class='row'><div class='row'>\
                     <h4>Orario Inizio: "+element["startTime"]+"</h4>\
                 </div>\
@@ -190,7 +191,7 @@ $(document).ready(function() {
                     <h4>Piano: "+element["floor"]+"</h4>\
                     </div>";
                 }
-                cardInnerText += "</div>";
+                cardInnerText += "</div></div>";
             });
             card.querySelector("h3").textContent = "Orario del giorno " + clickedCell.textContent;
             card.querySelector("p").innerHTML = cardInnerText;
@@ -201,20 +202,4 @@ $(document).ready(function() {
     closeCardButton.addEventListener("click", () => {
         card.style.display = "none";
     });
-    var expanded = false;
-
-    function showCheckboxes() {
-        var checkboxes = document.getElementById("checkboxes");
-        if (!expanded) {
-            let html = "";
-            allLessons.forEach(element=>html += "<label for='"+element+"'>\
-                <input type='checkbox' id='"+element+"' />"+element+"</label>");
-            document.getElementById("checkboxes").innerHTML = html;
-            checkboxes.style.display = "block";
-            expanded = true;
-        } else {
-            checkboxes.style.display = "none";
-            expanded = false;
-        }
-    }
 });

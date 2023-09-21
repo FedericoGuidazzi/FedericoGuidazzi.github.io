@@ -11,6 +11,14 @@ body {
     padding: 10px;
 }
 
+h3{
+    font-weight: bold;
+}
+
+div{
+    box-sizing: content-box;
+}
+
 /* Stili per schermi più piccoli */
 @media (max-width: 768px) {
     .calendar {

@@ -17,21 +17,8 @@
                 <h2 id="currentMonthYear" class = "col-4"></h2>
                 <button id="nextMonth" class = "col-4">→</button>
             </div>
-            <form class="mb-4">
-                <div class="multiselect">
-                  <div class="selectBox" onclick="showCheckboxes()">
-                    <select>
-                      <option>Select an option</option>
-                    </select>
-                    <div class="overSelect"></div>
-                  </div>
-                  <div id="checkboxes">
-                    
-                  </div>
-                </div>
-              </form>
             <div class="table-responsive">
-                <table id="calendarTable" class="table table-bordered">
+                <table id="calendarTable" class="table">
                     <thead>
                         <tr>
                             <th>Lunedì</th>
@@ -46,7 +33,7 @@
                     <tbody></tbody>
                 </table>
             </div>
-            <div id="card" class="card mt-4" style="display: none;">
+            <div id="card" class="mt-4 container" style="display: none;">
                 <!-- Contenuto della tua card -->
                 <h3 class="mt-2">Titolo della card</h3>
                 <p>Contenuto della card...</p>
