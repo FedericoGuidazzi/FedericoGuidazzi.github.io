@@ -28,6 +28,7 @@
   const app = initializeApp(firebaseConfig);
 
   const database = getDatabase(app);
+  var listaSpesa = []
 
   document.addEventListener('DOMContentLoaded', function () {
     loadShoppingList();
@@ -39,7 +40,7 @@
 
   function loadShoppingList() {
     const shoppingListRef = ref(database, 'listaDellaSpesa');
-
+    
     onValue(shoppingListRef, (snapshot) => {
       const data = snapshot.val();
       renderShoppingList(data || []); // Se non ci sono dati, passa un array vuoto
@@ -47,6 +48,7 @@
   }
 
   function renderShoppingList(shoppingList) {
+    listaSpesa = shoppingList;
     const shoppingListDiv = document.getElementById('shoppingListDiv');
     shoppingListDiv.innerHTML = '';  // Clear existing content
 
@@ -77,7 +79,7 @@
     const itemQuantity = parseInt(document.getElementById('quantity').value);
 
     if (itemName && !isNaN(itemQuantity) && itemQuantity > 0) {
-      const shoppingList = []; // Ottenere la lista direttamente da Firebase
+      const shoppingList = listaSpesa; // Ottenere la lista direttamente da Firebase
       const existingItemIndex = shoppingList.findIndex(item => item.name === itemName);
 
       if (existingItemIndex !== -1) {
@@ -94,7 +96,7 @@
   }
 
   function removeItem(itemName) {
-    const shoppingList = []; // Ottenere la lista direttamente da Firebase
+    const shoppingList = listaSpesa; // Ottenere la lista direttamente da Firebase
     const updatedList = shoppingList.filter(item => item.name !== itemName);
     saveShoppingList(updatedList);
     loadShoppingList();
