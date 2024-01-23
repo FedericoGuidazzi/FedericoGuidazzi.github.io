@@ -7,10 +7,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #121212; /* Colore di sfondo scuro */
+    color: #ffffff; /* Colore del testo bianco */
   }
   
   .container {
-    background-color: #fff;
+    background-color: #1e1e1e; /* Colore di sfondo scuro per il contenitore principale */
+    color: #ffffff; /* Colore del testo bianco nel contenitore principale */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,8 +24,6 @@ body {
   }
   
   button {
-    background-color: #4caf50;
-    color: #fff;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -36,3 +37,15 @@ body {
   .listItem{
     margin-bottom: 10px;
   }
+  /* Aggiorna gli stili degli input e dei pulsanti */
+  input, button {
+      background-color: #333333; /* Colore di sfondo più scuro per input e pulsanti */
+      color: #ffffff; /* Colore del testo bianco per input e pulsanti */
+  }
+
+  input {
+    box-shadow: none;
+  }
+ 
+ /* ... (continua con altri stili secondo necessità) ... */
+ 
