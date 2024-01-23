@@ -55,18 +55,30 @@
     shoppingList.forEach((item, index) => {
         // Create a div for each item
         const listItem = document.createElement('div');
+        listItem.classList.add('listItem');
         listItem.innerHTML = `<span>${item.name} - ${item.quantity}</span>`;
         
         // Create a delete button for each item
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Elimina';
         deleteButton.setAttribute('data-item-name', item.name);
+        deleteButton.classList.add('itemButton');
         deleteButton.addEventListener('click', function() {
             removeItem(item.name);
         });
 
+        // Create a modify button for each item
+        const modifyButton = document.createElement('button');
+        modifyButton.textContent = 'Modifica';
+        modifyButton.setAttribute('data-item-name', item.name);
+        modifyButton.classList.add('itemButton');
+        modifyButton.addEventListener('click', function() {
+            editItem(item.name);
+        });
+
         // Append the delete button to the list item
         listItem.appendChild(deleteButton);
+        listItem.appendChild(modifyButton);
 
         // Append the list item to the shopping list div
         shoppingListDiv.appendChild(listItem);
@@ -101,8 +113,28 @@
     saveShoppingList(updatedList);
     loadShoppingList();
   }
-  
-  
+
+  function editItem(itemName) {
+   const newQuantity = prompt(`Inserisci la nuova quantità per ${itemName}:`);
+   if (newQuantity !== null && !isNaN(newQuantity) && newQuantity > 0) {
+      updateQuantity(itemName, parseInt(newQuantity));
+   } else {
+      alert('Quantità non valida. Inserisci un numero maggiore di zero.');
+   }
+  }
+
+  function updateQuantity(itemName, newQuantity) {
+   const shoppingList = listaSpesa;
+   const itemIndex = shoppingList.findIndex(item => item.name === itemName);
+    console.log(itemIndex);
+   if (itemIndex !== -1) {
+      shoppingList[itemIndex].quantity = newQuantity;
+      saveShoppingList(shoppingList);
+      loadShoppingList();
+   } else {
+      alert(`Elemento non trovato: ${itemName}`);
+   }
+  }  
   </script>
 </head>
 <body>

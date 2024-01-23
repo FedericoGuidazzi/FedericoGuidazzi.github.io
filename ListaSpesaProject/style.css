@@ -28,4 +28,11 @@ body {
     cursor: pointer;
     border-radius: 4px;
   }
+
+  .itemButton{
+    margin-left: 10px;
+  }
   
+  .listItem{
+    margin-bottom: 10px;
+  }
