@@ -6,7 +6,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #121212; /* Colore di sfondo scuro */
     color: #ffffff; /* Colore del testo bianco */
   }
@@ -46,6 +45,9 @@ body {
   input {
     box-shadow: none;
   }
+
+
+
  
  /* ... (continua con altri stili secondo necessità) ... */
  
